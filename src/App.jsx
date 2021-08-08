@@ -1,10 +1,13 @@
 import React from 'react'
+import EmployeeList from './components/EmployeeList'
+import Header from './components/Header'
 
 const App = () => {
   return (
-    <div>
-      Hej
-    </div>
+    <>
+      <Header />
+      <EmployeeList />
+    </>
   )
 }
 
