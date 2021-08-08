@@ -18,7 +18,7 @@ const EmployeeList = () => {
 
   let employeeList = employees.map((employee, index) => {
     return (
-      <EmployeeCard key={index} className='card'>
+      <EmployeeCard key={index}>
         <EmployeeImg src={employee.avatar} alt='employee avatar' />
         <EmployeeName>
           {employee.first_name} {employee.last_name}
