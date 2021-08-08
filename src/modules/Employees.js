@@ -1,5 +1,6 @@
 import axios from 'axios'
 import store from '../state/store/configureStore'
+import errorHandler from './ErrorHandler'
 
 const Employees = {
   async index() {
@@ -12,7 +13,7 @@ const Employees = {
         payload: response.data.data,
       })
     } catch (error) {
-      return error
+      errorHandler(error)
     }
   },
 }
