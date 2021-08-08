@@ -11,12 +11,6 @@ const rootReducer = (state, action) => {
         error: true,
         message: 'No employees was recived',
       }
-      case 'ERROR_RESET':
-        return {
-          ...state,
-          error: false,
-          open: false,
-        }
     default:
       return state
   }

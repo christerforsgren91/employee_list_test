@@ -1,9 +1,10 @@
 import React from 'react'
+import { HeaderContainer } from '../styles/header'
 
 const Header = () => {
   return (
     <div>
-      Our Team
+      <HeaderContainer>Our Team</HeaderContainer>
     </div>
   )
 }

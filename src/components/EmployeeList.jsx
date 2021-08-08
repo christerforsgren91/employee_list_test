@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import Employees from '../modules/Employees'
+import {
+  EmployeeContainer,
+  EmployeeCard,
+  EmployeeImg,
+  EmployeeName,
+  EmployeeMail,
+} from '../styles/employeeList'
 
 const EmployeeList = () => {
   const { employees } = useSelector((state) => state)
@@ -11,17 +18,17 @@ const EmployeeList = () => {
 
   let employeeList = employees.map((employee, index) => {
     return (
-      <div key={index} className='card'>
-        <img src={employee.avatar} alt='employee avatar' />
-        <h4>
+      <EmployeeCard key={index} className='card'>
+        <EmployeeImg src={employee.avatar} alt='employee avatar' />
+        <EmployeeName>
           {employee.first_name} {employee.last_name}
-        </h4>
-        <p>{employee.email}</p>
-      </div>
+        </EmployeeName>
+        <EmployeeMail>{employee.email}</EmployeeMail>
+      </EmployeeCard>
     )
   })
 
-  return <div>{employeeList}</div>
+  return <EmployeeContainer>{employeeList}</EmployeeContainer>
 }
 
 export default EmployeeList
